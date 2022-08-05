@@ -2,7 +2,7 @@ const notes = require('express').Router();
 const fs = require('fs');
 const { v4: uuidv4 } = require('uuid');
 
-//GET request for notes
+//GET request for retrieving all notes
 notes.get('/', (req, res) => {
     fs.readFile('./db/db.json', 'utf8', (err, data) => {
         if (err) {
